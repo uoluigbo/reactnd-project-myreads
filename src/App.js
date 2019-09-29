@@ -10,7 +10,8 @@ class BooksApp extends React.Component {
   state = {
     books: [],
     searchResult: [],
-    shelves: {currentlyReading: [], wantToRead: [], read: []}
+    shelves: {currentlyReading: [], wantToRead: [], read: []},
+    searchError: false
   }
 
   bookshelfOpts = {
@@ -49,8 +50,11 @@ class BooksApp extends React.Component {
     if(querystring) {
       BooksAPI.search(querystring)
       .then((books) => {
+        const searchError = (books.error)?true:false
+
         this.setState({
-          searchResult: (books && books.length > 0)?books:[]
+          searchResult: (books && books.length > 0)?books:[],
+          searchError
         })
   
       })
@@ -91,6 +95,7 @@ class BooksApp extends React.Component {
             onShelfChange={this.updateBookshelf}
             shelves={this.state.shelves}
             onSearch={this.searchLibrary}
+            searchError={this.state.searchError}
           />
         )}
         

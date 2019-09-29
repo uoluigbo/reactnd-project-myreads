@@ -24,4 +24,10 @@ To navigate to the main menu, click on the back arrow on the search bar.
 In the search input, begin typing to display books that match your search. If there are no books matching your search, a 'No results Found' message is displayed. If the input is empty, then no search is carried out.
 
 
-## Installing
+## Installing and running
+* clone from: https://github.com/uoluigbo/reactnd-project-myreads.git
+
+* Run commands: npm install
+
+## Run the App
+* Run command: npm start
