@@ -7,17 +7,8 @@ import Bookshelf from './Bookshelf'
 class Bookshelves extends Component  {
     render() {
         const {books, options, onShelfChange, selectedShelves} = this.props
-        const shelves = []
-        let shelf = '';
         let booklist = []
         const bookshelves = []
-
-        for (let book of books) {
-            if(shelf !== book.shelf) {
-                shelves.push(book.shelf)
-                shelf = book.shelf
-            }
-        }
 
         for (let shelf in selectedShelves ) {
             if(shelf){
@@ -47,21 +38,6 @@ class Bookshelves extends Component  {
                     <div>
                    
                    {bookshelves}
-                   
-                    {/*
-                       shelves.map( shelf => {
-                        booklist = books.filter(book => book.shelf === shelf)
-
-                        return <div key={shelf} className="bookshelf">
-                            <Bookshelf options={options} shelf={shelf} onShelfChange={onShelfChange} />
-                            <div className="bookshelf-books">
-                                <ol className="books-grid">
-                                    <BookList books={booklist} options={options} onShelfChange={onShelfChange} shelves={selectedShelves} />
-                                </ol>
-                            </div>
-                        </div>
-                       }) 
-                    */}
                 
               </div>
             </div>
