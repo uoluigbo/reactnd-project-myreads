@@ -1,6 +1,8 @@
 # MyReads App
 
-This app has the main page and the search page
+This is a bookshelf app that allows you to add and remove books. The shelves are categorized into books you are currently reading, books you want to read and books you have read
+
+The app has the main page and the search page
 
 ## Main Page
 The main page displays a list of books grouped into 2 shelves. Each shelf has a title folowed by the list of books that belong to it. The shelves are
